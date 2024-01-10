@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="UTF-8">
+   <title>Formulario de notas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estiloejercicio.css">
+</head>
+<body>
+
+  <div class="container">
+ <table>
+   <tr>
+     <td><h2>Formulario de Notas</h2></td>
+   </tr>
+   <tr>
+     <td>
+       <form action="/ejercicio1" method="POST">
+           <label for="nota1">Nota 1:</label>
+           <br>
+           <input type="number" id="nota1" name="nota1" min="10" max="70" required>
+           <br>
+           <label for="nota2">Nota 2:</label>
+           <br>
+           <input type="number" id="nota2" name="nota2" min="10" max="70" required>
+           <br>
+           <label for="nota3">Nota 3:</label>
+           <br>
+           <input type="number" id="nota3" name="nota3" min="10" max="70" required>
+           <br>
+           <label for="asistencia">Asistencia: (%)</label>
+           <br>
+           <input type="number" id="asistencia" name="asistencia" min="0" max="100" required>
+           <br>
+           <br>
+           <button type="submit">ENVIAR</button>
+       </form>
+     </td>
+   </tr>
+   <tr>
+     <td>
+       {% if promedio and estado %}
+       <div>
+           <h2>Resultado:</h2>
+           <p>Promedio: {{ promedio }}</p>
+           <p>Estado: {{ estado }}</p>
+       </div>
+       {% endif %}
+     </td>
+   </tr>
+ </table>
+</div>
+
+</body>
+</html>

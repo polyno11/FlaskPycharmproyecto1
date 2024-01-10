@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nombre</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estiloejercicio2.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <form action="ejercicio2", method="POST">
+                        <label for="Nombre1">Nombre 1:</label>
+                        <br>
+                        <input type="text"  name="Nombre1" required>
+                        <br>
+                        <label for="Nombre2">Nombre 2:</label>
+                        <br>
+                        <input type="text" m="text"  name="Nombre2"required>
+                        <br>
+                        <label for="Nombre3">Nombre 3:</label>
+                        <br>
+                        <input type="text"  name="Nombre3" required>
+                        <br>
+                        <br>
+                        <button type="submit"> ENVIAR </button>
+
+                    </form>
+                </td>
+                {% if nombre_mas_largo and cantidad_caracteres %}
+               <tr> <td>
+                        <h2>Resultado:</h2>
+                        <p>El nombre con mayor caracteres es: {{ nombre_mas_largo }}</p>
+                        <p>el nombre tiene: {{ cantidad_caracteres}} caracteres</p>
+                </tr></td>
+                {% endif %}
+
+            </tr>
+
+        </table>
+
+
+
+
+    </div>
+
+</body>
+</html>
